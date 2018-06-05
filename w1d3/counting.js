@@ -8,15 +8,19 @@ function countLetters(input){
 	for (var i=0; i<input1.length; i++){
 		
 		if (input1[i] in final){
-			final[input1[i]]+= 1 
+			final[input1[i]]["count"]+=1;
+			final[input1[i]]["index"].push(i) 
 		}
 
 		else{
-			final[input1[i]] = 1
+			final[input1[i]] = {count:1, index:[i]}
 		}
 
 
 	}
+
+
+
 	return final
 }
 
